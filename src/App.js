@@ -15,9 +15,14 @@ function App() {
   }, [notes]);
 
   function addNote(newNote) {
+    if(newNote.length>=1){
     setNotes((prevValue) => {
       return [...prevValue, newNote];
     });
+  }
+  else{
+    alert("Fill all fields")
+  }
   }
 
   function DeleteNotes(id){
